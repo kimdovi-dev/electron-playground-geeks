@@ -1,0 +1,42 @@
+/* 
+  ### Note: 
+  1. @use는 @import랑 비슷한 개념인데 import와는 달리 접근자로 특정 스타일에 접근 가능해서 import 보다 안전해요~! 
+  
+  2. :root는 의사 클래스로 문서 가장 상위 요소를 나타냅니다. 즉, html태그를 가리킵니다.
+  보통 전역에서 사용하는 스타일 값을 (예를들어 메인 테마와 관련된..)이 안에서 변수로 선언해두고 사용합니다. 
+  요기 있는 값들을 각 스타일 시트에서 사용하려면 var(변수명) 요로케 사용해주시면 됩니다.
+  #사용 예시)
+  main.scss에서 --primary-color에 저장된 색상을 사용하고 싶은 경우
+  color: var( --primary-color) 이렇게 작성해주시면 됩니다.
+*/
+
+@use "./common/media-query" as media;
+
+:root {
+  position: relative;
+  height: 100%;
+  --font-size: 10px;
+  --font-family: 'Noto Sans KR', '맑은 고딕', 'Apple SD Gothic Neo', sans-serif;
+  --main-blue-color: #5865f2;
+  --workspace-gray-color: #36393f;
+  --side-pen-gray-color: #2f3136;
+  --darkest-gray-color: #202225;
+  --header-label-color: #b9bbbe;
+  --sign-warn-color: #ed4245;
+  --sign-link-color: #00aff4;
+  --sign-notice-color: #a4a6a8;
+  --main-green-color: #3ba55d;
+}
+
+@include media.tablet {
+  :root {
+    --font-family: 'Noto Sans KR', '맑은 고딕', 'Apple SD Gothic Neo',
+      sans-serif;
+  }
+}
+
+@include media.mobile {
+  :root {
+    --font-size: 8px;
+  }
+}

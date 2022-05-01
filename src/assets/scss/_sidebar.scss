@@ -1,0 +1,122 @@
+.sidebar {
+  background-color: var(--darkest-gray-color);
+  width: 7.2rem;
+  height: 100vh;
+  text-align: center;
+  li {
+    padding-top: 1.2rem;
+    margin-bottom: 1.2rem;
+    &.nowtab button {
+      padding: 0;
+      border: 2px solid var(--main-green-color);
+    }
+  }
+
+  &__home > .divider {
+    display: inline-block;
+    width: 70%;
+    padding-bottom: 1.2rem;
+    border-bottom: 2px solid #292b2e;
+  }
+}
+
+.sidepan {
+  text-align: center;
+  width: 24rem;
+  height: 100vh;
+  background-color: var(--side-pen-gray-color);
+  box-sizing: border-box;
+
+  div {
+    height: 4.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .side-title {
+    width: 22.4rem;
+    height: 4.4rem;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 8px auto 0;
+    button {
+      display: inline-flex;
+      justify-content: left;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      background-color: #393c43;
+      border-radius: 3px;
+    }
+  }
+
+  .scroll-area {
+    display: block;
+    overflow-y: auto;
+    height: 82%;
+    /* 스크롤바 설정 */
+    &::-webkit-scrollbar {
+      width: 0.5rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      height: 1%;
+      border-radius: 3rem;
+      background-color: #3ba55d;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #393c43;
+    }
+  }
+}
+
+.sidepan-header {
+  height: 100%;
+  padding: 0 1rem;
+  box-shadow: 0 1px 0 rgba(4, 4, 5, 0.2), 0 1.5px 0 rgba(6, 6, 7, 0.05),
+    0 2px 0 rgba(4, 4, 5, 0.05);
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 2.8rem;
+    background-color: var(--darkest-gray-color);
+    border: 2px solid var(--darkest-gray-color);
+    border-radius: 3px;
+    color: #6e7279;
+  }
+
+  input:focus {
+    border: 2px solid var(--main-blue-color);
+  }
+
+  button {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: #fff;
+  }
+
+  button:after {
+    position: absolute;
+    right: 0;
+    margin-right: 1rem;
+    display: inline-flex;
+    width: 0.8rem;
+    height: 0.8rem;
+    transform: rotate(45deg);
+    border: 2px solid #fff;
+    border-width: 0 2px 2px 0;
+    box-sizing: border-box;
+    content: '';
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  button.dropped:after {
+    transform: rotate(-135deg);
+  }
+}

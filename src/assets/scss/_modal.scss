@@ -1,0 +1,106 @@
+.modal {
+  &-bg {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($color: #000000, $alpha: 0.9);
+  }
+
+  &-wrap {
+    position: relative;
+    width: 44rem;
+    background-color: var(--workspace-gray-color);
+    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  &-wrap.small {
+    height: 52rem;
+  }
+
+  &-title {
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  &-title + small {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  &-subtitle {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  &-header {
+    position: relative;
+    margin-bottom: 3rem;
+    padding: 1.6rem;
+  }
+  &-body {
+    padding: 1.6rem;
+  }
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 6.5rem;
+    padding-right: 1.6rem;
+    background-color: #2f3136;
+
+    & > button {
+      height: 3.8rem;
+      box-sizing: border-box;
+    }
+
+    & > button:first-child {
+      margin-right: 1rem;
+    }
+  }
+
+  &-close {
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+    button {
+      background-color: transparent;
+    }
+
+    button::before {
+      position: absolute;
+      top: 0.5rem;
+      display: inline-block;
+      content: '';
+      width: 0.2rem;
+      height: 1.5rem;
+      background-color: #fff;
+      transform: rotate(-45deg);
+    }
+
+    button:after {
+      position: absolute;
+      top: 0.5rem;
+      display: inline-block;
+      content: '';
+      width: 0.2rem;
+      height: 1.5rem;
+      background-color: #fff;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.channel-name {
+  margin-top: 2rem;
+}

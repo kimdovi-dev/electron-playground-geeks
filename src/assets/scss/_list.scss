@@ -1,0 +1,44 @@
+.list {
+  &-wrap {
+    li {
+      width: 22.4rem;
+      height: 4.2rem;
+      margin: 1rem auto 0;
+    }
+    a {
+      position: relative;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      padding-left: 1.5rem;
+      color: #fff;
+      align-items: center;
+      justify-content: start;
+      border-radius: 0.3rem;
+    }
+    a:hover {
+      background-color: #393c43;
+    }
+  }
+  &-item {
+    display: inline-block;
+  }
+  &-item.pic {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.2rem;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+      width: 100%;
+    }
+  }
+  &-item.name {
+    font-size: 1.6rem;
+  }
+  &-item.badge {
+    position: absolute;
+    right: 1.4rem;
+    font-size: 1.6rem;
+  }
+}

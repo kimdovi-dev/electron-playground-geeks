@@ -1,0 +1,32 @@
+.contents {
+  &-wrap {
+    width: 48rem;
+    color: #fff;
+    background-color: var(--workspace-gray-color);
+    text-align: center;
+    padding: 3.2rem;
+    font-weight: normal;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem var(--workspace-gray-color);
+  }
+  &__title {
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 1.4rem;
+  }
+  &__subtitle {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: var(--header-label-color);
+    line-height: 1;
+    margin-bottom: 2.3rem;
+  }
+}
+
+
+button[type='submit'] {
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
